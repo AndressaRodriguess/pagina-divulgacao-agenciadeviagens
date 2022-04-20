@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    top: 0;
+    padding: 0;
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    background-color: bisque;
+    color: rgb(42, 35, 85);
+    padding: 20px;
+    position: fixed;
+    height: 4vh;
+    width: 100vw;
+    text-align: left;
+    z-index: 2;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(42, 35, 85);
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+nav a:hover {
+    color: rgb(132, 179, 179);
+}
+
+.banner{
+    background-image: url(../img/banner.jpg);
+    height: 100vh;
+    filter: brightness(0.5);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    color: white;
+    right: 50px;
+}
+
+.wrapper h1 {
+    font-size: 1.4em;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+.wrapper h2 {
+    font-size: 1.1em;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+.orcamento {
+    display: flex;
+    height: 25vh;
+    background-color: rgb(103, 73, 131);
+    padding: 50px 20px 20px;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.orcamento h2 {
+    color: white;
+    font-size: 1.2em;
+}
+
+.orcamento button {
+    width: 320px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid rgb(182, 240, 240);
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+}
+
+.orcamento button:hover{
+    background-color: rgb(182, 240, 240);
+    color: rgb(103, 73, 131);
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+.vantagens {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    padding: 80px 30px 80px;
+}
+
+.vantagens div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    justify-content: flex-start;
+    /*height: 50vh;*/
+    text-align: center;
+    animation: up 1s alternate linear;
+}
+
+.vantagens div svg {
+    color: rgb(132 179 179);
+    margin: 20px 0;
+}
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #84b3b3bf;
+    padding: 80px 50px 50px;
+}
+
+.row-servico {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px;
+}
+
+.row-servico:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.card-texto {
+    width: 70%;
+    padding: 0 15px;
+    margin: 20px;
+}
+
+.card-texto h2::after {
+    content: '';
+    width: 100%;
+    background-color:  rgb(103, 73, 131);
+    height: 3px;
+    display: block;
+}
+
+.card-texto p {
+    margin: 20px 0;
+}
+
+.img-card {
+    width: 30%;
+}
+
+.img-card img {
+    width: 100%;
+    box-sizing: border-box;
+    /* border: 1px solid rgb(103 73 131); */
+    box-shadow: 0px 0px 8px 0px rgba(103, 73, 131, 0.25);
+    box-sizing: border-box;
+    border-radius: 25px;
+    animation: float 3s ease-out alternate;
+}
+
+@keyframes up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(103, 73, 131, 0.6);
+        transform: translatex(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(103, 73, 131, 0.2);
+        transform: translatex(-20px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(103, 73, 131, 0.6);
+        transform: translatex(0px);
+    }
+}
